@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+:root {
+  --yellow: yellow;
+  --light-yellow: #ffffe0;
+  --green: #808000;
+  --black: black;
+  --white: white;
+}
+
+.pixelify-sans-<uniquifier > {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  background-color: var(--light-yellow);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply rotation only to daisy images */
+img[src*="daisy.png"] {
+  height: 5em;
+  width: 5em;
+  animation: rotate 3s linear infinite;
+}
+
+/* Prevent rotation for heart image */
+.heart {
+  height: 1em;
+  width: 1em;
+  animation: none; /* Stops any animation */
+}
+
+.heart2 {
+  height: 5em;
+  width: 5em;
+  animation: none; /* Stops any animation */
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  color: var(--green);
+}
